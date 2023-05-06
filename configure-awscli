@@ -1,0 +1,6 @@
+Step1:  go to the aws document page 
+ https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html
+Step2: in my case based on OS i executed below command
+curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+unzip awscliv2.zip
+sudo ./aws/install
