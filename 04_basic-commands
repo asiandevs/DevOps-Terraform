@@ -8,7 +8,12 @@
  terraform init 
  5. To delivers an execution plan that is more like a demo plan that shows the changes will occur during creating an infrastructure
  terraform plan 
- 6. To execute/ apply the command complies with the terraform plan command.
+ 
+ 6. To generate the visual execution graph of Terraform resources
+ terraform graph
+ NOTE: The graph is outputted in DOT format. You can copy this code into the GraphViz Online viewer (https://dreampuf.github.io/GraphvizOnline/) to see the visual representation.
+ - VSCODE use plugin
+ 7. To execute/ apply the command complies with the terraform plan command.
  terraform apply
  
  Note: to see the option please check with "-help" [ Example :  terraform apply -help ] 
