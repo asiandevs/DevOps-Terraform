@@ -4,11 +4,10 @@
  terraform providers
  3. to check the accuracy of the data in the directory. 
  terraform validate
- 4.To initialize providers, refresh, update and prepare directories
+ 4.To down the code for the provided inside the Terraform configuration folder - refresh, update and prepare directories
  terraform init 
- 5. To delivers an execution plan that is more like a demo plan that shows the changes will occur during creating an infrastructure
+ 5. To delivers an execution plan- sanity check of the code that shows the changes will occur during creating an infrastructure
  terraform plan 
- 
  6. To generate the visual execution graph of Terraform resources
  terraform graph
  NOTE: The graph is outputted in DOT format. You can copy this code into the GraphViz Online viewer (https://dreampuf.github.io/GraphvizOnline/) to see the visual representation.
