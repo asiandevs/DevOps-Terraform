@@ -1,0 +1,12 @@
+ 1. Get a list of available commands for execution 
+ terraform -help
+ 2. Displays a tree of providers used in the configuration files 
+ terraform providers
+ 3. To initialize providers, refresh, update and prepare directories
+ terraform init 
+ 4. To delivers an execution plan that is more like a demo plan that shows the changes will occur during creating an infrastructure
+ terraform plan 
+ 5. To execute/ apply the command complies with the terraform plan command.
+ terraform apply
+ 
+ Note: to see the option please check with "-help" [ Example :  terraform apply -help ] 
