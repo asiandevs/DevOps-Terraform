@@ -66,3 +66,7 @@ Sample output:
 2023-05-06T09:47:36.977Z [TRACE] LoadSchemas: retrieving schema for provisioner "remote-exec"
 2023-05-06T09:47:37.052Z [TRACE] statemgr.Filesystem: removing lock metadata file .terraform.tfstate.lock.info
 2023-05-06T09:47:37.052Z [TRACE] statemgr.Filesystem: unlocking terraform.tfstate using fcntl flock
+
+Step 4: Todisable trace file
+[ec2-user@ip-10-0-14-30 s3]$ export TF_LOG=
+[ec2-user@ip-10-0-14-30 s3]$ export TF_LOG_PATH=
