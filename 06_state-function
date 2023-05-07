@@ -4,8 +4,9 @@ Get the list all the resources being tracked by the Terraform state file
   a) see the options available for this command
    terraform state or terraform state -help
    b)terraform state list
-   ```
-   [ec2-user@ip-10-0-14-30 terraform]$ terraform state list
+   
+Sample output:
+[ec2-user@ip-10-0-14-30 terraform]$ terraform state list
 data.aws_availability_zones.azs
 data.aws_route_table.main_route_table
 data.aws_ssm_parameter.webserver-ami
@@ -16,12 +17,13 @@ aws_key_pair.webserver-key
 aws_security_group.sg
 aws_subnet.subnet
 aws_vpc.vpc
-```
+
    Step 2: Show details of a specific resource tracked 
-   terraform state show <resource name>
-   Sample output:
-   ```
-   # aws_vpc.vpc:
+  terraform state show <resource name>
+  
+  Sample output:
+  terraform state show aws_vpc.vpc
+    # aws_vpc.vpc:
 resource "aws_vpc" "vpc" {
     arn                                  = "arn:aws:ec2:us-east-1:027777522454:vpc/vpc-002673b3cb1999d4c"
     assign_generated_ipv6_cidr_block     = false
@@ -47,7 +49,7 @@ resource "aws_vpc" "vpc" {
         "Name" = "terraform-vpc"
     }
 }
-```
+
 Step 3: To delete a resource from the state file
 terraform state rm <resource>
 sample output:
