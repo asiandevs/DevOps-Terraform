@@ -1,8 +1,23 @@
-##### Need to update taint feature -MM
+Step 1 : Taint command
+Terraform to replace a resource and run the provisioner again upon the next deployment:
+terraform taint <provisioning resource name>
+Sample command:
+[ec2-user@ip-10-0-14-30 s3]$ terraform taint aws_s3_bucket_versioning.amity01_versioning
+Resource instance aws_s3_bucket_versioning.amity01_versioning has been marked as tainted.
 
-[ec2-user@ip-10-0-14-30 terraform]$ terraform taint aws_instance.webserver
-Resource instance aws_instance.webserver has been marked as tainted.
+See the resource status: marked as tainted
+[ec2-user@ip-10-0-14-30 s3]$ terraform state show aws_s3_bucket_versioning.amity01_versioning
+# aws_s3_bucket_versioning.amity01_versioning: (tainted)
+resource "aws_s3_bucket_versioning" "amity01_versioning" {
+    bucket = "amity01"
+    id     = "amity01"
 
+    versioning_configuration {
+        status = "Enabled"
+    }
+}
+
+NOTE: on next terraform deploy it will be cleared tainted marked.
 
 Step2: import a resource into configuration management
 We can use below command to import existing resource inside terraform configuration 
