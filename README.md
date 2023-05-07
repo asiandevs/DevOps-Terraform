@@ -9,8 +9,14 @@ I have provisioned a AWS EC2 linux instance
 ! Make sure any Software Licence requirements from your side. Please do modify path or vriables based on your own setup. 
 ```
 
+## Advise - when you learning
+```diff
+- NOTE
+! Please remove the resources/s to avoid unnecessary cost -- make sure you are in right workspace before executing destroy command 
 ```
-
+```
+terraform destroy --auto-approve
+```
 ## Files
 
 File                 | tasks
