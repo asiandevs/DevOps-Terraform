@@ -9,6 +9,7 @@ We can use below command to import existing resource inside terraform configurat
 i: terraform init
 ii: terraform import aws_instance.mymanualinstance <instance id>
 iv: terraform show
+
 sample output: 
 [ec2-user@ip-10-0-14-30 import]$ cat main.tf
 provider "aws" {
