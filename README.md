@@ -1,4 +1,4 @@
-## Terraform Basic Commands
+## Terraform Commands Usage
 In this section I will go through Terraform commands.
 
 ## prerequisite:
