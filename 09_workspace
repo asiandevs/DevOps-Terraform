@@ -9,7 +9,7 @@ terraform workspace select dev
 
 4 To delete the workspace
 
-terraform workspace delete test 
+terraform workspace delete dev
 6.	Tear down the infrastructure you just 
 
 Sample Test Output: 
