@@ -30,5 +30,5 @@ File                 | tasks
 07_format_output_debug | **Formatting and debugging**
 08_taint_import        | **taint and import**  
 09_workspace           | **workspace**
-10_s3                  |**AWS S3**  --- > in progress **
+10_s3                  |**AWS S3**
 ```
