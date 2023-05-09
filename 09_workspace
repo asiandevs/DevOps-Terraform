@@ -1,4 +1,4 @@
-1. to get the list of workspcae 
+1. To get the list of workspcae 
 terraform workspace list
 
 2. To create a new workspace [example new workspace dev]
@@ -8,13 +8,14 @@ terraform workspace list
 terraform workspace select dev
 
 4 To delete the workspace
-
 terraform workspace delete dev
-6.	Tear down the infrastructure you just 
 
-Sample Test Output: 
+Sample Output: 
+
 [ec2-user@ip-10-0-14-30 terraform_monowar]$ terraform workspace list
 * default
+
+NOTE: * represent which current workspace
 
 [ec2-user@ip-10-0-14-30 terraform_monowar]$ terraform workspace new dev
 Created and switched to workspace "dev"!
