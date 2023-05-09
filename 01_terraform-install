@@ -1,6 +1,6 @@
-Step 1: 1.	Log in to the Linux server using the credential
+Step 1: Log in to the Linux server using the credential
 
-Step2: Download Terraform Software and install  
+Step 2: Download Terraform Software and install  
 
 https://developer.hashicorp.com/terraform/downloads
 
@@ -10,7 +10,7 @@ sudo yum install -y yum-utils shadow-utils
 sudo yum-config-manager --add-repo https://rpm.releases.hashicorp.com/AmazonLinux/hashicorp.repo
 sudo yum -y install terraform
 
-Step3: validate software 
+Step 3: validate software 
 terraform --version
 
 Sample output:
