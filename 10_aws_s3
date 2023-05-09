@@ -1,6 +1,7 @@
+This is specific to create a S3 and enable some features there (versioning, lifecycle rule)
+
 Step 1: To make this separate - For this task I have created a separate directory
 mkdir s3
-
 
 Step 2: Add entry for the required variables
 
