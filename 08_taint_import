@@ -6,6 +6,7 @@ Sample command:
 Resource instance aws_s3_bucket_versioning.amity01_versioning has been marked as tainted.
 
 See the resource status: marked as tainted
+
 [ec2-user@ip-10-0-14-30 s3]$ terraform state show aws_s3_bucket_versioning.amity01_versioning
 # aws_s3_bucket_versioning.amity01_versioning: (tainted)
 resource "aws_s3_bucket_versioning" "amity01_versioning" {
@@ -19,7 +20,7 @@ resource "aws_s3_bucket_versioning" "amity01_versioning" {
 
 NOTE: on next terraform deploy it will be cleared tainted marked.
 
-Step2: import a resource into configuration management
+Step 2: import a resource into configuration management
 We can use below command to import existing resource inside terraform configuration 
 i: terraform init
 ii: terraform import aws_instance.mymanualinstance <instance id>
