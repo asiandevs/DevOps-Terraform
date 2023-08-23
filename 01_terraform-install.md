@@ -6,13 +6,15 @@ https://developer.hashicorp.com/terraform/downloads
 
 In this case I have used Amazon Linux 
 Execute below command
+```
 sudo yum install -y yum-utils shadow-utils
 sudo yum-config-manager --add-repo https://rpm.releases.hashicorp.com/AmazonLinux/hashicorp.repo
 sudo yum -y install terraform
-
+```
 Step 3: validate software 
+```
 terraform --version
-
+```
 Sample output:
 [ec2-user@ip-10-0-14-30 terraform]$ terraform --version
 Terraform v1.4.6
