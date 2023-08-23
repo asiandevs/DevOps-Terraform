@@ -1,15 +1,20 @@
 1. To get the list of workspcae 
+```
 terraform workspace list
-
+```
 2. To create a new workspace [example new workspace dev]
- terraform workspace new dev
-
+``` 
+terraform workspace new dev
+```
 3. Switch to a specific workspace 
+```
 terraform workspace select dev
-
+```
 4 To delete the workspace
+```
 terraform workspace delete dev
-
+```
+```
 Sample Output: 
 
 [ec2-user@ip-10-0-14-30 terraform_monowar]$ terraform workspace list
@@ -23,7 +28,8 @@ Created and switched to workspace "dev"!
 You're now on a new, empty workspace. Workspaces isolate their state,
 so if you run "terraform plan" Terraform will not see any existing state
 for this configuration.
-
+```
+```
 [ec2-user@ip-10-0-14-30 s3]$ terraform plan
 
 Terraform used the selected providers to generate the following execution plan. Resource actions are
@@ -48,3 +54,4 @@ aws_s3_bucket_versioning.amity01_versioning
 [ec2-user@ip-10-0-14-30 s3]$ terraform workspace select default
 Switched to workspace "default".
 [ec2-user@ip-10-0-14-30 s3]$ terraform state list
+```
