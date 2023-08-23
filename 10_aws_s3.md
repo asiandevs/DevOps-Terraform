@@ -1,10 +1,11 @@
 This is specific to create a S3 and enable some features there (versioning, lifecycle rule)
 
 Step 1: To make this separate - For this task I have created a separate directory
+```
 mkdir s3
-
+```
 Step 2: Add entry for the required variables
-
+```
 vars.tf
 variable "aws_region" {
   description = "AWS region"
@@ -17,9 +18,9 @@ variable "bucket_name" {
   type        = string
   default     = "amity01"
 }
-
+```
 Step 3: I have added resource to create bucket with few features
-
+```
 main.tf
 provider "aws" {
   region = "us-east-1"
@@ -127,8 +128,11 @@ resource "aws_s3_bucket_public_access_block" "amity_public_block" {
   ignore_public_acls = true
   restrict_public_buckets = true
 }
-
+```
 Step 4: terraform init
+
 Step 5: terraform plan
+
 Step 6: terraform apply --auto-approve 
+
 Step 7 :  terraform state list
