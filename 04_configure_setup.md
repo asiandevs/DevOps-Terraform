@@ -1,21 +1,22 @@
 
 Step 1: Create a work directory
+```
 mkdir terraform
 cd terraform/
-
+```
 Step 2: Create variables files - for aws provider 
-
-[ec2-user@ip-10-0-14-30 terraform]$ cat variables.tf
+```
+$ cat variables.tf
 provider "aws" {
   access_key = "AKghskass$%%%%%%V"
   secret_key = "xwva@##$$*************QXSj4X3"
   region     = "us-east-1"
 }
-
+```
 NOTE! Get the user accees key and secret key for the respective AWS user. Make sure user has got right privileges [ example: admin rights]
 
 Step 3: Here I have added all the required components to provision EC2 in AWS inside setup.tf
-
+```
 [ec2-user@ip-10-0-14-30 terraform]$ cat setup.tf
 
 #Create key-pair for logging into EC2 in us-east-1
@@ -111,8 +112,9 @@ resource "aws_security_group" "sg" {
 output "Webserver-Public-IP" {
   value = aws_instance.webserver.public_ip
 }
-
+```
 STep 4: main file is as below 
+```
 [ec2-user@ip-10-0-14-30 terraform]$ cat main.tf
 
 #Create and bootstrap webserver
@@ -140,4 +142,4 @@ resource "aws_instance" "webserver" {
     Name = "webserver"
   }
 }
-
+```
