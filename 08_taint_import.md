@@ -2,11 +2,12 @@ Step 1 : Taint command
 Terraform to replace a resource and run the provisioner again upon the next deployment:
 terraform taint <provisioning resource name>
 Sample command:
+```
 [ec2-user@ip-10-0-14-30 s3]$ terraform taint aws_s3_bucket_versioning.amity01_versioning
 Resource instance aws_s3_bucket_versioning.amity01_versioning has been marked as tainted.
-
+```
 See the resource status: marked as tainted
-
+```
 [ec2-user@ip-10-0-14-30 s3]$ terraform state show aws_s3_bucket_versioning.amity01_versioning
 # aws_s3_bucket_versioning.amity01_versioning: (tainted)
 resource "aws_s3_bucket_versioning" "amity01_versioning" {
@@ -17,15 +18,18 @@ resource "aws_s3_bucket_versioning" "amity01_versioning" {
         status = "Enabled"
     }
 }
-
+```
 NOTE: on next terraform deploy it will be cleared tainted marked.
 
 Step 2: import a resource into configuration management
 We can use below command to import existing resource inside terraform configuration 
+```
 i: terraform init
 ii: terraform import aws_instance.mymanualinstance <instance id>
 iv: terraform show
+```
 
+```
 sample output: 
 [ec2-user@ip-10-0-14-30 import]$ cat main.tf
 provider "aws" {
@@ -55,6 +59,8 @@ should now work.
 If you ever set or change modules or backend configuration for Terraform,
 rerun this command to reinitialize your working directory. If you forget, other
 commands will detect it and remind you to do so if necessary.
+```
+```
 [ec2-user@ip-10-0-14-30 import]$ terraform import aws_instance.mysrcinstance i-017618b7635c55e24
 aws_instance.mysrcinstance: Importing from ID "i-017618b7635c55e24"...
 aws_instance.mysrcinstance: Import prepared!
@@ -65,7 +71,8 @@ Import successful!
 
 The resources that were imported are shown above. These resources are now in
 your Terraform state and will henceforth be managed by Terraform.
-
+```
+```
 [ec2-user@ip-10-0-14-30 import]$ terraform show
 # aws_instance.mysrcinstance:
 resource "aws_instance" "mysrcinstance" {
@@ -155,3 +162,4 @@ resource "aws_instance" "mysrcinstance" {
         volume_type           = "gp3"
     }
 }
+```
