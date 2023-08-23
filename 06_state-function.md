@@ -2,10 +2,11 @@ Step 1. There is a *.tfstate file under the directory to hold the resource infor
 
 Get the list all the resources being tracked by the Terraform state file
   a) see the options available for this command
+  ```
    terraform state or terraform state -help
-   
+   ```
   b)terraform state list
-   
+```   
 Sample output:
 [ec2-user@ip-10-0-14-30 terraform]$ terraform state list
 data.aws_availability_zones.azs
@@ -18,8 +19,9 @@ aws_key_pair.webserver-key
 aws_security_group.sg
 aws_subnet.subnet
 aws_vpc.vpc
-
+```
 Step 2: Show details of a specific resource tracked 
+```
   terraform state show <resource name>
   
   Sample output:
@@ -50,10 +52,10 @@ resource "aws_vpc" "vpc" {
         "Name" = "terraform-vpc"
     }
 }
-
+```
 Step 3: To delete a resource from the state file
 terraform state rm <resource>
-
+```
 sample output:
 [ec2-user@ip-10-0-14-30 terraform]$ terraform state rm aws_vpc.vpc
 Removed aws_vpc.vpc
@@ -72,4 +74,4 @@ drwxr-xr-x. 3 ec2-user ec2-user    78 May  5 21:12 aws
 -rw-r--r--. 1 ec2-user ec2-user 16447 May  6 09:34 terraform.tfstate
 [ec2-user@ip-10-0-14-30 terraform]$ date
 Sat May  6 09:34:49 UTC 2023
-
+```
