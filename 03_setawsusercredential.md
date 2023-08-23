@@ -21,7 +21,7 @@ Default output format [None]: json
 aws_access_key_id = AKIAQ**********A2HV
 aws_secret_access_key =xwv^^^^^^^^^^^^^^^^Sj4X3
 
-NOte: you can also pass aws credential as Terraform variables - like as below 
+Note: you can also pass aws credential as Terraform variables - like as below 
 
 [ec2-user@ip-10-0-14-30 terraform]$ cat variables.tf
 provider "aws" {
