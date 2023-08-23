@@ -12,6 +12,7 @@ Step 3: validate
 execute  /usr/local/bin/aws --version
 ```
 Sample Output:
+```
 [ec2-user@ip-10-0-14-30 terraform]$ /usr/local/bin/aws --version
 aws-cli/2.11.18 Python/3.11.3 Linux/6.1.25-37.47.amzn2023.x86_64 exe/x86_64.amzn.2023 prompt/off
-
+```
