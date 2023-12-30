@@ -7,6 +7,8 @@ mkdir s3
 Step 2: Add entry for the required variables
 ```
 vars.tf
+```
+```
 variable "aws_region" {
   description = "AWS region"
   type        = string
@@ -22,6 +24,8 @@ variable "bucket_name" {
 Step 3: I have added resource to create bucket with few features
 ```
 main.tf
+```
+```
 provider "aws" {
   region = "us-east-1"
 }
