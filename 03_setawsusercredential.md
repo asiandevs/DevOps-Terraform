@@ -1,9 +1,9 @@
-Step 1: From the Linux session execute 
+## Step 1: From the Linux session execute 
 ```
 aws configure
 ```
 
-Step 2: validate the entries are added
+## Step 2: validate the entries are added
 ```
 cat ~/.aws/credentials 
 ```
@@ -30,3 +30,14 @@ provider "aws" {
   region     = "us-east-1"
 }
 ```
+
+## Step 3: Verify Credential:
+```
+aws sts get-caller-identity
+```
+{
+    "UserId": "AIDAQM55LLMLFKAGKPNTD",
+    "Account": "027777522454",
+    "Arn": "arn:aws:iam::027777522454:user/admin01"
+}
+
